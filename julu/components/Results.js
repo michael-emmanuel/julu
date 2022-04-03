@@ -1,9 +1,10 @@
 import Thumbnail from "./Thumbnail";
 
-function Results({ requests }) {
+function Results({ results }) {
+  // NextJS lazy loads images out the box
   return (
     <div>
-      {requests.map(result => (
+      {results.map(result => (
         <Thumbnail key={result.id} result={result} />
       ))}
     </div>
